@@ -24,3 +24,23 @@ export interface jsonResult {
     msg: string;
     data?: any;
 }
+
+export interface tgroupRow {
+    id:number
+    status:number
+    key:string
+    name:string
+    chat_id:string
+    remark:string
+}
+
+export const tgroupRowEmpty = ():tgroupRow => {
+    return {
+        id:0,
+        status:1,
+        key:'',
+        name:'',
+        chat_id:'',
+        remark:''
+    }
+}

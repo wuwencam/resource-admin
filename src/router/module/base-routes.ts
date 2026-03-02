@@ -32,6 +32,11 @@ export default [
           component: () => import('../../views/common/page.vue'),
           meta: { title: '单页面',requireAuth: true },
         },
+        {
+          path: '/tgroup',
+          component: () => import('../../views/common/tgroup.vue'),
+          meta: { title: 'TG群组',requireAuth: true },
+        },
     ]
   },
   {
@@ -53,6 +58,23 @@ export default [
           path: '/admin/action',
           component: () => import('../../views/admin/action.vue'),
           meta: { title: '菜单', requireAuth: true },
+        }
+      ]
+    },
+    {
+      path: '/app',
+      component: BasicLayout,
+      meta: { title: '应用管理',requireAuth: true },
+      children: [
+        {
+          path: '/app/items',
+          component: () => import('../../views/app/items.vue'),
+          meta: { title: '应用列表', requireAuth: true },
+        },
+        {
+          path: '/app/scene',
+          component: () => import('../../views/app/scene.vue'),
+          meta: { title: '应用场景', requireAuth: true },
         }
       ]
     },
