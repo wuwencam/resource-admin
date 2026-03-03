@@ -10,7 +10,7 @@ type TAxiosOption = {
  
 const config: TAxiosOption = {
     timeout: 5000,
-    baseURL: "http://localhost:8080"
+    baseURL: import.meta.env.VITE_BASE_URL
 }
  
 class Http {
