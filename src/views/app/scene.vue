@@ -65,12 +65,12 @@
                 </lay-form-item>
                 <lay-form-item label="截取模式" prop="mode" required>
                     <lay-radio-group name="mode" v-model="formRow.mode">
-                        <lay-radio v-for="(key,val) in modeSource" :value="val">{{ key }}</lay-radio>
+                        <lay-radio v-for="(key,val) in modeSource" :value="Number(val)">{{ key }}</lay-radio>
                     </lay-radio-group>
                 </lay-form-item>
                 <lay-form-item label="宽高模式" prop="size" required>
                     <lay-radio-group name="size" v-model="formRow.size" @change="changeSizeMode">
-                        <lay-radio v-for="(key,val) in sizeSource" :value="val">{{ key.name }}</lay-radio>
+                        <lay-radio v-for="(key,val) in sizeSource" :value="Number(val)">{{ key.name }}</lay-radio>
                     </lay-radio-group>
                 </lay-form-item>
                 <lay-form-item label="最大体积" prop="max_size" mode="inline" required>
